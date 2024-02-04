@@ -14,4 +14,3 @@ RUN pacman -Syu --noconfirm base base-devel
 
 COPY --chown=user:group ./dist /mnt
 
-CMD [ "./app" ]

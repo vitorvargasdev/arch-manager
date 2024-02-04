@@ -10,7 +10,7 @@ tasks:
 
   :run-arch:
     cmds:
-      - 'docker-compose run --rm archlinux {{.CLI_ARGS}}'
+      - 'docker-compose run --rm archlinux /bin/bash -c "/mnt/app {{.CLI_ARGS}}"'
 
   :run-app:
     cmds:
