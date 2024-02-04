@@ -1,0 +1,11 @@
+version: "3.5"
+
+services:
+  archlinux:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: archlinux
+    privileged: true
+    volumes:
+      - ./dist:/mnt
