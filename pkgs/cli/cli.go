@@ -1,15 +1,14 @@
 package cli
 
 import (
-	"fmt"
-
 	cli "github.com/urfave/cli/v2"
+	installArch "github.com/vitorvargasdev/archmanager/pkgs/install"
 )
 
 func Prepare() *cli.App {
 	app := cli.NewApp()
 	app.Name = "Arch Manager ~ Developed by @vitorvargasdev"
-	app.Usage = "Installation and management of Arch Linux with easy"
+	app.Usage = "Installation and management of Arch Linux with eas"
 
 	Flags := []cli.Flag{}
 
@@ -26,7 +25,7 @@ func Prepare() *cli.App {
 }
 
 func install(c *cli.Context) error {
-	fmt.Println("Installing Arch Linux with Arch Manager")
+	installArch.Run()
 
 	return nil
 }
